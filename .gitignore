@@ -3,12 +3,7 @@
 .Rhistory
 .RData
 .Ruserdata
-.Rbuildignore
-accelerateTreatmentTime.Rproj
 
 # R
 *.rds
-*.Rd
 
-# Output
-*.html
