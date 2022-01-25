@@ -1,0 +1,21 @@
+---
+title: "Accelerate treatment time -- an example"
+author: "Haris Fawad"
+date: "1/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(accelerateTreatmentTime)
+```
+
+
+## Simulate data
+```{r}
+n <- 1000
+simulateData(n)
+```
+
+The simulated data consists of individuals waiting for treatment. We follow each individual from diagnosis until death or censoring. There is a binary baseline covariate $X$, where $X=0$ denotes healthier individuals, while $X=1$ denotes individuals that are worse off. There is also a binary time-varying covariate $L$ which changes from $L=0$ to $L=1$ for an individual who has progressed further in his disease. Healthier individuals (as expressed by both $X$ and $L$) are more likely to receive treatment. The treatment itself has a protecting effect against death. 
